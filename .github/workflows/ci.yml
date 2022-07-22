@@ -53,6 +53,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - run: sudo apt-get update
+      - run: sudo apt-get install libcairo2-dev
       - run: make ci_up
       - run: make ci_quality
 
